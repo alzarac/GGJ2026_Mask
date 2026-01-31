@@ -2,24 +2,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float[] posicionesZ = { -2f, 0f, 2f }; 
-    int indiceActual = 1; 
+    public int numeroCarriles = 5;
+    public float distanciaEntreCarriles = 1f;
+
+    int indiceActual = 0;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
             indiceActual++;
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            indiceActual--;
-        }
 
-        indiceActual = Mathf.Clamp(indiceActual, 0, posicionesZ.Length - 1);
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+            indiceActual--;
+
+        
 
         Vector3 pos = transform.position;
-        pos.z = posicionesZ[indiceActual];
+        pos.z = indiceActual * distanciaEntreCarriles;
         transform.position = pos;
     }
 }
