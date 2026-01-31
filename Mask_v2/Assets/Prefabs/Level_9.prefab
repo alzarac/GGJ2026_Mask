@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4701237466815215273, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4701237466815215273, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4449186529082995010, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -100,9 +108,81 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 1824810567794730218, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824810567794730218, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330559196036592656, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330559196036592656, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592296609101884656, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592296609101884656, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357053376419547775, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357053376419547775, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586448008469996744, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586448008469996744, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202055550839895520, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202055550839895520, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578298412554259914, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578298412554259914, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952099302156197031, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7952099302156197031, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8575822331295011451, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648300956914171018, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648300956914171018, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
