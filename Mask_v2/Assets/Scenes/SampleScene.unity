@@ -939,10 +939,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1824946938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0299f0a4c4992f3419c286ee247fc5bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 18617e402116e10418d2bde2db785546, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  playerCollider: {fileID: 36812558}
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1 &1930855675
 GameObject:
   m_ObjectHideFlags: 0
