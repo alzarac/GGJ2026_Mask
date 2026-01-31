@@ -20,9 +20,9 @@ public class PlayerScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Obstacle"))
+        if (other.CompareTag("Mask"))
         {
-            Debug.Log("Player hit an obstacle!");
+           print("Player hit an obstacle!");
             // Handle collision with obstacle (e.g., reduce health, end game, etc.)
         }
     }
