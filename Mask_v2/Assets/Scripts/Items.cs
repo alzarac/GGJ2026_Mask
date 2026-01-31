@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class Items : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Target to Spin")]
+    public GameObject target;       // Assign the object you want to spin
+
+    [Header("Spin Settings")]
+    public Vector3 rotationAxis = Vector3.up; // Axis to spin around (default: Y axis)
+    public float rotationSpeed = 90f;         // Degrees per second
+
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Rotate the target
+        target.transform.Rotate(rotationAxis.normalized * rotationSpeed * Time.deltaTime, Space.World);
     }
+
+
 }
+
