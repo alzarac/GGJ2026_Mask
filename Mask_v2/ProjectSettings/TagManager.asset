@@ -12,6 +12,7 @@ TagManager:
   - MaskUI_Happy
   - MaskUI_Angry
   - MaskUI_Sad
+  - KillCollider
   layers:
   - Default
   - TransparentFX

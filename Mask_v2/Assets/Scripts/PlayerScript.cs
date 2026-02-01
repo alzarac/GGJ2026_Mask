@@ -1,5 +1,6 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -47,5 +48,13 @@ public class PlayerScript : MonoBehaviour
             Destroy(other.gameObject.transform.parent.gameObject);
             happyFaceText.text = (int.Parse(happyFaceText.text) + 1).ToString();
         }
+
+        if (other.gameObject.tag == "KillCollider")
+        {
+            print("Player fall!");
+            // Handle collision with obstacle (e.g., reduce health, end game, etc.)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
     }
 }
