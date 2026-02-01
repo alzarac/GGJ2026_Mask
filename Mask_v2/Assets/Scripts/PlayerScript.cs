@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour
     public TMP_Text sadFaceText;
     public TMP_Text angryFaceText;
     public int maxpoits = 2;
+    public AudioSource Audioobjeto;
+    public AudioSource Audiomorir;
 
     private bool yaGano = false;
 
@@ -17,35 +19,42 @@ public class PlayerScript : MonoBehaviour
     {
         if (yaGano) return;
 
-        // Pasamos el texto, el nombre y EL ÍNDICE de la escena
+        // Pasamos el texto, el nombre y EL ï¿½NDICE de la escena
         if (other.gameObject.CompareTag("Mask_Angry"))
         {
             ActualizarPuntaje(other, angryFaceText, "Enojada", 4);
+            Audioobjeto.Play();
         }
         else if (other.gameObject.CompareTag("Mask_Sad"))
         {
             ActualizarPuntaje(other, sadFaceText, "Triste", 3);
+            Audioobjeto.Play();
         }
         else if (other.gameObject.CompareTag("Mask_Happy"))
         {
             ActualizarPuntaje(other, happyFaceText, "Feliz", 5);
+            Audioobjeto.Play();
         }
         else if (other.gameObject.CompareTag("KillCollider"))
         {
+            Audiomorir.Play();
             print("Player fall!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
         }
 
         if (other.gameObject.CompareTag("Enemy"))
         {
+            Audiomorir.Play();
             print("Player fall!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
         }
 
 
     }
 
-    // Añadimos 'int indiceEscena' como parámetro
+    // Aï¿½adimos 'int indiceEscena' como parï¿½metro
     void ActualizarPuntaje(Collider col, TMP_Text textoUI, string tipo, int indiceEscena)
     {
         print($"Player hit an {tipo}!");
@@ -61,9 +70,9 @@ public class PlayerScript : MonoBehaviour
         if (puntos >= maxpoits)
         {
             yaGano = true;
-            print($"¡Ganaste! Personalidad: {tipo}. Cargando escena {indiceEscena}");
+            print($"ï¿½Ganaste! Personalidad: {tipo}. Cargando escena {indiceEscena}");
 
-            // Carga la escena específica que le pasamos
+            // Carga la escena especï¿½fica que le pasamos
             SceneManager.LoadScene(indiceEscena);
         }
     }
