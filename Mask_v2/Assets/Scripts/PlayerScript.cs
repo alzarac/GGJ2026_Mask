@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     public int maxpoits = 2;
     public AudioSource Audioobjeto;
     public AudioSource Audiomorir;
+    public GameOver GameOver;
 
     private bool yaGano = false;
 
@@ -39,7 +40,7 @@ public class PlayerScript : MonoBehaviour
         {
             Audiomorir.Play();
             print("Player fall!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameOver.Setup();
             
         }
 
@@ -47,7 +48,7 @@ public class PlayerScript : MonoBehaviour
         {
             Audiomorir.Play();
             print("Player fall!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameOver.Setup();
             
         }
 

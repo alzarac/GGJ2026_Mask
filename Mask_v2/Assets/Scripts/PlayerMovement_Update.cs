@@ -8,6 +8,7 @@ public class PlayerMovement_Update : MonoBehaviour
     public float distanciaEntreCarriles = 1f;
     public float fuerzaSalto = 7f;
     public float alturaMaximaVelocidad = 8f;
+    //Animator animator;
 
     [Header("Transition Settings")]
     public float transitionSpeed = 5f; // Controls how fast the lane change happens
@@ -20,7 +21,7 @@ public class PlayerMovement_Update : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         if (rb == null)
-            Debug.LogError("No se encontró un Rigidbody en el GameObject.");
+            Debug.LogError("No se encontrï¿½ un Rigidbody en el GameObject.");
 
         // Start with current position as target
         targetPosition = transform.position;
@@ -33,7 +34,7 @@ public class PlayerMovement_Update : MonoBehaviour
             indiceActual--;
         else
             indiceActual++;
-        int limite = numeroCarriles / 2; // Asume número impar para tener carril central
+        int limite = numeroCarriles / 2; // Asume nï¿½mero impar para tener carril central
         indiceActual = Mathf.Clamp(indiceActual, -limite, limite);
         // Update target position instead of teleporting
         targetPosition = new Vector3(transform.position.x, transform.position.y, indiceActual * distanciaEntreCarriles);
@@ -45,6 +46,7 @@ public class PlayerMovement_Update : MonoBehaviour
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
+            //animator.SetBool("Jump");
         }
     }
 
@@ -56,7 +58,7 @@ public class PlayerMovement_Update : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
             indiceActual++;
 
-        int limite = numeroCarriles / 2; // Asume número impar para tener carril central
+        int limite = numeroCarriles / 2; // Asume nï¿½mero impar para tener carril central
         indiceActual = Mathf.Clamp(indiceActual, -limite, limite);
 
         // Update target position instead of teleporting
