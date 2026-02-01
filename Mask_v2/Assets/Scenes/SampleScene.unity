@@ -1665,7 +1665,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895374588}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12cbf8bc0c182c84f849a83c5c56a191, type: 3}
   m_Name: 
@@ -3156,7 +3156,6 @@ MonoBehaviour:
   maxpoits: 10
   Audioobjeto: {fileID: 446818589}
   Audiomorir: {fileID: 873414808}
-  GameOver: {fileID: 895374589}
 --- !u!114 &1824946944
 MonoBehaviour:
   m_ObjectHideFlags: 0
