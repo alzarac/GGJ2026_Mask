@@ -4,57 +4,60 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     public Collider playerCollider;
     public Canvas mainCanvas;
     public TMP_Text happyFaceText;
     public TMP_Text sadFaceText;
     public TMP_Text angryFaceText;
+    public int maxpoits = 2;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool yaGano = false;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Mask_Angry")
-        {
-           print("Player hit an Angry!");
-            // Handle collision with obstacle (e.g., reduce health, end game, etc.)
-            Destroy(other.gameObject.transform.parent.gameObject);
-            angryFaceText.text = (int.Parse(angryFaceText.text) + 1).ToString();
-        }
+        if (yaGano) return;
 
-        if (other.gameObject.tag == "Mask_Sad")
+        // Pasamos el texto, el nombre y EL ÍNDICE de la escena
+        if (other.gameObject.CompareTag("Mask_Angry"))
         {
-            print("Player hit an Sad!");
-            // Handle collision with obstacle (e.g., reduce health, end game, etc.)
-            Destroy(other.gameObject.transform.parent.gameObject);
-            sadFaceText.text = (int.Parse(sadFaceText.text) + 1).ToString();
+            ActualizarPuntaje(other, angryFaceText, "Enojada", 4);
         }
-
-        if (other.gameObject.tag == "Mask_Happy")
+        else if (other.gameObject.CompareTag("Mask_Sad"))
         {
-            print("Player hit an Happy!");
-            // Handle collision with obstacle (e.g., reduce health, end game, etc.)
-            Destroy(other.gameObject.transform.parent.gameObject);
-            happyFaceText.text = (int.Parse(happyFaceText.text) + 1).ToString();
+            ActualizarPuntaje(other, sadFaceText, "Triste", 3);
         }
-
-        if (other.gameObject.tag == "KillCollider")
+        else if (other.gameObject.CompareTag("Mask_Happy"))
+        {
+            ActualizarPuntaje(other, happyFaceText, "Feliz", 5);
+        }
+        else if (other.gameObject.CompareTag("KillCollider"))
         {
             print("Player fall!");
-            // Handle collision with obstacle (e.g., reduce health, end game, etc.)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
 
+    // Añadimos 'int indiceEscena' como parámetro
+    void ActualizarPuntaje(Collider col, TMP_Text textoUI, string tipo, int indiceEscena)
+    {
+        print($"Player hit an {tipo}!");
+
+        if (col.gameObject.transform.parent != null)
+            Destroy(col.gameObject.transform.parent.gameObject);
+        else
+            Destroy(col.gameObject);
+
+        int puntos = int.Parse(textoUI.text) + 1;
+        textoUI.text = puntos.ToString();
+
+        if (puntos >= maxpoits)
+        {
+            yaGano = true;
+            print($"¡Ganaste! Personalidad: {tipo}. Cargando escena {indiceEscena}");
+
+            // Carga la escena específica que le pasamos
+            SceneManager.LoadScene(indiceEscena);
+        }
     }
 }
+
