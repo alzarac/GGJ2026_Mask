@@ -597,6 +597,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 4253084022089543800, guid: 362d11e67520ca340b5e585607330d9a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d1e657f761500de419bae5407806bc7f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1389,6 +1393,7 @@ MonoBehaviour:
   happyFaceText: {fileID: 307653334}
   sadFaceText: {fileID: 264321858}
   angryFaceText: {fileID: 52420837}
+  maxpoits: 10
 --- !u!114 &1824946944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1403,8 +1408,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement_Update
   numeroCarriles: 6
   distanciaEntreCarriles: 1
-  fuerzaSalto: 7
-  alturaMaximaVelocidad: 7
+  fuerzaSalto: 5
+  alturaMaximaVelocidad: 4
   transitionSpeed: 5
 --- !u!1 &1881729366
 GameObject:
