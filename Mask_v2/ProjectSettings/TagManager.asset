@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Level
   - Ground
+  - Mask_Happy
+  - Mask_Angry
+  - Mask_Sad
+  - MaskUI_Happy
+  - MaskUI_Angry
+  - MaskUI_Sad
   layers:
   - Default
   - TransparentFX

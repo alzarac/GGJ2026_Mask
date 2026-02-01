@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4479102567247329726, guid: 579b8e6b38903e94a81ed2b390b405ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01905
+      value: -187.616
       objectReference: {fileID: 0}
     - target: {fileID: 4479102567247329726, guid: 579b8e6b38903e94a81ed2b390b405ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01783
+      value: -2710.164
       objectReference: {fileID: 0}
     - target: {fileID: 4479102567247329726, guid: 579b8e6b38903e94a81ed2b390b405ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.03362
+      value: 0.47906
       objectReference: {fileID: 0}
     - target: {fileID: 4479102567247329726, guid: 579b8e6b38903e94a81ed2b390b405ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0d528835297b6a54dabb2dafc1103ad5, type: 2}
+    - target: {fileID: 6325633359369841801, guid: 579b8e6b38903e94a81ed2b390b405ae, type: 3}
+      propertyPath: m_TagString
+      value: Mask_Happy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
