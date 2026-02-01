@@ -35,6 +35,14 @@ public class PlayerScript : MonoBehaviour
             print("Player fall!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            print("Player fall!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+
     }
 
     // Añadimos 'int indiceEscena' como parámetro

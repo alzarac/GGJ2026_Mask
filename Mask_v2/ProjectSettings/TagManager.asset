@@ -13,6 +13,7 @@ TagManager:
   - MaskUI_Angry
   - MaskUI_Sad
   - KillCollider
+  - Enemy
   layers:
   - Default
   - TransparentFX

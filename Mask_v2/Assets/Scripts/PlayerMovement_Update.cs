@@ -26,6 +26,28 @@ public class PlayerMovement_Update : MonoBehaviour
         targetPosition = transform.position;
     }
 
+    public void PressArrow(bool value) { 
+        print(value);
+
+        if (value)
+            indiceActual--;
+        else
+            indiceActual++;
+        int limite = numeroCarriles / 2; // Asume número impar para tener carril central
+        indiceActual = Mathf.Clamp(indiceActual, -limite, limite);
+        // Update target position instead of teleporting
+        targetPosition = new Vector3(transform.position.x, transform.position.y, indiceActual * distanciaEntreCarriles);
+
+    }
+
+    public void PressJump() {
+        if (Mathf.Abs(rb.linearVelocity.y) < 0.01f)
+        {
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+            rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
+        }
+    }
+
     void Update()
     {
         // Mover por carriles (izq = -1, der = +1)
